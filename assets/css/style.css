@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+*{
+  border:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------------------*/
+/* ------------------ GENERAL -----------------*/
+/* --------------------------------------------*/
+
+body{
+    font-family: 'Karla', sans-serif;
+    margin:6rem;
+    color: #323a45;
+}
+
+a{
+  color:unset;
+  text-decoration: none;
+  flex:auto;
+}
+
+a:hover{
+  opacity:0.5;
+}
+
+/* --------------------------------------------*/
+/* ------------------ HEADER ------------------*/
+/* --------------------------------------------*/
+
+header{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-bottom: 3rem;
+}
+
+h1{
+  font-size:1.5em;
+  font-weight:700;
+  text-transform: uppercase;
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  flex: auto;
+}
+
+header i.fa-bars{
+  display:none;
+}
+
+
+
+/* --------------------------------------------*/
+/* ------------------- SHOP -------------------*/
+/* --------------------------------------------*/
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  gap:20px;
+}
+
+.gridBigPicture{
+  grid-column: 1/4;
+}
+
+img{
+  width: 100%;
+}
+
+figcaption{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top:1rem;
+  margin-bottom:2rem;
+}
+
+.price{
+  text-align: right;;
+}
+
+.company{
+  color:#848484;
+}
+
+
+/* --------------------------------------------*/
+/* ------------------ FOOTER ------------------*/
+/* --------------------------------------------*/
+
+footer{
+  margin-top:3em;
+}
+
+footer section{
+  display: grid;
+  grid-template-columns: 35% 20% 30% 15%;
+}
+
+h2{
+  font-size:1.1rem;
+  font-weight:400;
+  margin-bottom: 1.7rem;
+}
+
+footer p,
+footer .social{
+  line-height:1.5rem;
+}
+
+.pSmaller{
+  width: 80%;
+}
+
+.social a{
+  display: block;
+}
+
+.italic{
+  font-style:italic;
+  color:#848484
+}
+
+.bold{
+  font-weight:700;
+}
+
+footer p.copyright{
+  font-size:0.8rem;
+  margin:4rem 0 1rem 0;
+  color:#848484;
+}
+
+i.fa-circle{
+  font-size: 0.3rem;
+  padding: 10px 7px;
+  vertical-align: top;
+}
+
+
+
+
+
+/* --------------------------------------------*/
+/* ------------------ MOBILE ------------------*/
+/* --------------------------------------------*/
+@media screen and (max-width: 768px) {
+  body{
+    margin:1.5rem;
+  }
+  header{
+    margin-bottom:1rem;
+  }
+  h1{
+    font-size:1rem;
+    margin-top:2rem;
+  }
+  nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  ul{
+    display:none;
+  }
+  header i.fa-bars{
+    display:initial;
+    font-size:1.5rem;
+  }
+  main{
+    grid-template-columns: 1fr ;
+  }
+  .gridBigPicture{
+      grid-column: 1/2;
+  }
+  footer section{
+    grid-template-columns: 1fr;
+  }
+  h2{
+    margin-top: 3rem;
+  }
+  p.pSmaller{
+    width:95%;
+  }
+  footer section article p,
+  footer section article a,
+  .copyright{
+    font-size:0.9rem;
+  }
+
+
+
+}
